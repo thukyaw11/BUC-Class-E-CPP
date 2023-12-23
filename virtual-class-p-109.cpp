@@ -18,10 +18,11 @@ class Shape {
 class Rectangle:public Shape {
     public: 
         Rectangle(int a=0, int b=0) : Shape(a,b) {
-
+            width = a;
+            height = b;
         }
         int area() {
-            cout << "Rectangle Class Area";
+            cout << "Rectangle Class Area: " << width*height << endl;
             return (width*height);
         }
 };
@@ -39,7 +40,7 @@ class Triangle:public Shape {
 
 int main() {
     Shape *shape;
-    Rectangle rect;
+    Rectangle rect(8,9);
     Triangle tri;
     shape = &rect;
     shape->area();
